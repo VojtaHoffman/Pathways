@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pathways — Student Internship Nonprofit</title>
+  <meta name="description" content="Pathways is a student nonprofit connecting peers to real-world internships across industries and regions. Explore, filter, and apply — all in one place.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="assets/logo.svg" alt="Pathways logo">
+        <span>Pathways</span>
+      </a>
+      <nav>
+        <a href="#about" class="link">About</a>
+        <a href="#how" class="link">How it works</a>
+        <a href="#internships" class="link">Internships</a>
+        <a href="#contact" class="link cta">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section container">
+      <div class="pill">Student-run • Nonprofit • Global opportunities</div>
+      <h1>Open doors to your future career.</h1>
+      <p>We connect students with vetted internships in their desired industries. Use our free, filterable directory to discover roles that match your interests.</p>
+      <div class="actions">
+        <a href="#internships" class="button primary">Browse internships</a>
+        <a href="#about" class="button">Learn about Pathways</a>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Mentor network</h3>
+          <p>Get matched with student mentors who have been there — resume reviews, interview prep, and peer support.</p>
+        </div>
+        <div class="card">
+          <h3>Industry partners</h3>
+          <p>We collaborate with companies and nonprofits to publish high-quality, student-friendly roles.</p>
+        </div>
+        <div class="card">
+          <h3>Access for all</h3>
+          <p>Pathways is free and built by students. Our goal is equity — democratizing access to early career experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="how">
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>How it works</h3>
+          <ol>
+            <li>Search the directory using the filters.</li>
+            <li>Open a posting to learn more and apply.</li>
+            <li>Join our community for prep and support.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>For partners</h3>
+          <p>Have an opportunity for students? Share your role and reach our growing community.</p>
+          <a href="#contact" class="button">Partner with us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="internships" aria-labelledby="internships-heading">
+      <h2 id="internships-heading" style="margin-top:0;">Internships directory</h2>
+      <p class="kbd">Showing <span id="count">0</span> opportunities • Use filters to refine</p>
+      <div class="controls" role="region" aria-label="Filters">
+        <label class="sr-only" for="search">Search</label>
+        <input id="search" class="input" type="search" placeholder="Search title, organization, keywords… (e.g., design, biology, remote)">
+        <label class="sr-only" for="filter-area">Area</label>
+        <select id="filter-area" class="select" aria-label="Filter by area"></select>
+        <label class="sr-only" for="filter-industry">Industry</label>
+        <select id="filter-industry" class="select" aria-label="Filter by industry"></select>
+        <label class="sr-only" for="filter-paid">Compensation</label>
+        <select id="filter-paid" class="select" aria-label="Filter by compensation"></select>
+        <label class="sr-only" for="sort">Sort</label>
+        <select id="sort" class="select" aria-label="Sort results">
+          <option value="relevance">Sort: Relevance</option>
+          <option value="deadline-asc">Sort: Deadline ↑</option>
+          <option value="deadline-desc">Sort: Deadline ↓</option>
+          <option value="title-asc">Sort: Title A→Z</option>
+          <option value="title-desc">Sort: Title Z→A</option>
+        </select>
+      </div>
+      <div id="list" class="list" aria-live="polite"></div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Contact us</h3>
+          <p>Questions or want to collaborate? We’d love to hear from you.</p>
+          <p>Email: <a href="mailto:hello@pathways.org">hello@pathways.org</a></p>
+        </div>
+        <div class="card">
+          <h3>Join the newsletter</h3>
+          <p>Get new internships in your inbox.</p>
+          <form onsubmit="event.preventDefault(); alert('Thanks for subscribing! (This is a static demo)');">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" class="input" type="email" placeholder="you@school.edu" required>
+            <div style="height: 12px"></div>
+            <button class="button primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>&copy; <span id="year"></span> Pathways — Student internship nonprofit. Built with ❤️ by students.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
